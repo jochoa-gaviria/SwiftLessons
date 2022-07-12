@@ -16,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D595B51287D004400965C64 /* Strings.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Strings.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		0DDB0B9828767DB700260265 /* FirstExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DDB0B9B28767DB700260265 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DDB0B9D28767DB700260265 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +66,7 @@
 				0DDB0BA628767DC000260265 /* LaunchScreen.storyboard */,
 				0DDB0BA928767DC000260265 /* Info.plist */,
 				0DDB0BAF28767DE100260265 /* MyPlayground.playground */,
+				0D595B51287D004400965C64 /* Strings.playground */,
 			);
 			path = FirstExample;
 			sourceTree = "<group>";

@@ -8,5 +8,7 @@
         <page name='Enums'/>
         <page name='Sets'/>
         <page name='RangeOperator'/>
+        <page name='Condicionals'/>
+        <page name='Loops'/>
     </pages>
 </playground>

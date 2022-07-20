@@ -5,5 +5,10 @@
         <page name='OptionalBinding'/>
         <page name='OptionalChaning'/>
         <page name='GuardLet'/>
+        <page name='HandleErrors'/>
+        <page name='TypeCasting'/>
+        <page name='NestedTypes'/>
+        <page name='Extensions'/>
+        <page name='Protocols'/>
     </pages>
 </playground>

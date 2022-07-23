@@ -12,5 +12,6 @@
         <page name='Protocols'/>
         <page name='Generics'/>
         <page name='AdvanceOperators'/>
+        <page name='CollectionsAlgoritms'/>
     </pages>
 </playground>

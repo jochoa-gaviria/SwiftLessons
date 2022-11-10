@@ -24,7 +24,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unp-fx-nbE">
-                                <rect key="frame" x="170" y="716" width="74" height="35"/>
+                                <rect key="frame" x="30" y="715" width="354" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
@@ -38,30 +38,67 @@
                                     <constraint firstAttribute="height" constant="150" id="1wR-JU-lKg"/>
                                 </constraints>
                             </pickerView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="cWB-EL-thi">
-                                <rect key="frame" x="0.0" y="800" width="436" height="26"/>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="cWB-EL-thi">
+                                <rect key="frame" x="15" y="800" width="384" height="26"/>
                                 <connections>
                                     <action selector="myPageControlAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="U71-H6-5xF"/>
                                 </connections>
                             </pageControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ycD-Yj-ckl">
+                                <rect key="frame" x="20" y="567" width="374" height="32"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="mySegmentedControlAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="3wN-YM-mAG"/>
+                                </connections>
+                            </segmentedControl>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="yXb-bO-7D7">
+                                <rect key="frame" x="18" y="655" width="378" height="31"/>
+                                <connections>
+                                    <action selector="mySliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="5BO-z9-ixW"/>
+                                </connections>
+                            </slider>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="9UT-fR-Adr">
+                                <rect key="frame" x="160" y="395" width="94" height="32"/>
+                                <connections>
+                                    <action selector="mySteperAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="iYR-Nl-Lqg"/>
+                                </connections>
+                            </stepper>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6fz-kA-q2Q">
+                                <rect key="frame" x="182.5" y="174" width="51" height="31"/>
+                                <connections>
+                                    <action selector="mySwitchAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="SDU-oJ-vds"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="unp-fx-nbE" secondAttribute="trailing" constant="169" id="0Q9-fR-NKo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yXb-bO-7D7" secondAttribute="trailing" constant="20" id="0DS-ur-fAf"/>
                             <constraint firstItem="and-Hz-Tgj" firstAttribute="top" secondItem="bMg-iQ-0dA" secondAttribute="bottom" constant="97" id="0bq-XS-caM"/>
+                            <constraint firstItem="unp-fx-nbE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="6QQ-1l-aSL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cWB-EL-thi" secondAttribute="bottom" constant="36" id="80b-tW-WVL"/>
-                            <constraint firstItem="unp-fx-nbE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="170" id="CSd-AF-alf"/>
-                            <constraint firstItem="cWB-EL-thi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="146" id="EGa-qb-L34"/>
+                            <constraint firstItem="9UT-fR-Adr" firstAttribute="top" secondItem="bMg-iQ-0dA" secondAttribute="bottom" constant="20" id="8g6-8h-zcK"/>
+                            <constraint firstItem="ycD-Yj-ckl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="A6P-Dh-8NC"/>
+                            <constraint firstItem="6fz-kA-q2Q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FrZ-Ji-pjN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cWB-EL-thi" secondAttribute="trailing" constant="15" id="IzQ-pf-NxU"/>
                             <constraint firstItem="bMg-iQ-0dA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="29" id="Pcn-vH-WQH"/>
+                            <constraint firstItem="unp-fx-nbE" firstAttribute="top" secondItem="yXb-bO-7D7" secondAttribute="bottom" constant="30" id="UBD-Of-9ch"/>
                             <constraint firstItem="bMg-iQ-0dA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UMT-BG-PSQ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="unp-fx-nbE" secondAttribute="bottom" constant="111" id="VrE-J3-xMa"/>
                             <constraint firstItem="and-Hz-Tgj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="152" id="YvJ-tr-0CZ"/>
+                            <constraint firstItem="bMg-iQ-0dA" firstAttribute="top" secondItem="6fz-kA-q2Q" secondAttribute="bottom" constant="20" id="Zyf-Dn-i9d"/>
                             <constraint firstItem="bMg-iQ-0dA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="177" id="bK5-3H-b0M"/>
-                            <constraint firstItem="cWB-EL-thi" firstAttribute="top" secondItem="unp-fx-nbE" secondAttribute="bottom" constant="49" id="dU2-3T-Zgh"/>
+                            <constraint firstItem="yXb-bO-7D7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="d7C-Dh-sZ8"/>
                             <constraint firstItem="bMg-iQ-0dA" firstAttribute="centerX" secondItem="unp-fx-nbE" secondAttribute="centerX" id="giN-dU-NPi"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cWB-EL-thi" secondAttribute="trailing" constant="151" id="i23-mV-anO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="unp-fx-nbE" secondAttribute="trailing" constant="30" id="hvp-eO-5p8"/>
+                            <constraint firstItem="ycD-Yj-ckl" firstAttribute="top" secondItem="and-Hz-Tgj" secondAttribute="bottom" constant="69" id="pMz-ex-3PG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ycD-Yj-ckl" secondAttribute="trailing" constant="20" id="rEo-iU-itI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="and-Hz-Tgj" secondAttribute="trailing" constant="151" id="rMn-Mq-7Pv"/>
+                            <constraint firstItem="cWB-EL-thi" firstAttribute="top" secondItem="unp-fx-nbE" secondAttribute="bottom" constant="50" id="tz5-lv-FW5"/>
+                            <constraint firstItem="9UT-fR-Adr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uRy-qM-6Hb"/>
+                            <constraint firstItem="cWB-EL-thi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="xLI-eX-XUA"/>
                         </constraints>
                     </view>
                     <connections>
@@ -69,6 +106,10 @@
                         <outlet property="myButton" destination="unp-fx-nbE" id="53l-SW-nfQ"/>
                         <outlet property="myPageControl" destination="cWB-EL-thi" id="pFr-wy-Yk6"/>
                         <outlet property="myPickerView" destination="bMg-iQ-0dA" id="Ph1-pt-HIe"/>
+                        <outlet property="mySegmenterControl" destination="ycD-Yj-ckl" id="U9n-OC-uq1"/>
+                        <outlet property="mySlider" destination="yXb-bO-7D7" id="V6z-1L-oSR"/>
+                        <outlet property="mySteper" destination="9UT-fR-Adr" id="g0g-05-Aaj"/>
+                        <outlet property="mySwitch" destination="6fz-kA-q2Q" id="VPg-5r-7dW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

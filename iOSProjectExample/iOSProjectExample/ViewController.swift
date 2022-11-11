@@ -17,13 +17,25 @@ class ViewController: UIViewController {
     @IBOutlet weak var mySlider: UISlider!
     @IBOutlet weak var mySteper: UIStepper!
     @IBOutlet weak var mySwitch: UISwitch!
+    @IBOutlet weak var myProgressView: UIProgressView!
+    @IBOutlet weak var myActityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var myStepperLabel: UILabel!
+    @IBOutlet weak var mySwitchLabel: UILabel!
+    @IBOutlet weak var myTextField: UITextField!
     
     //Variables
     private let myPickerViewValues = ["Uno", "Dos", "Tres", "Cuatro", "Cinco"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Labels
         etiqueta.text = "Hola!!"
+        
+        myStepperLabel.textColor = .darkGray
+        myStepperLabel.font = UIFont.boldSystemFont(ofSize: 36)
+        myStepperLabel.text = "1"
+        
+        mySwitchLabel.text = "Está apagado"
         
         //Button
         myButton.setTitle("My Botón", for: .normal)
@@ -60,6 +72,21 @@ class ViewController: UIViewController {
         //Switch
         mySwitch.onTintColor = .purple
         mySwitch.isOn = false
+        
+        //Indicators
+        //ProgressView
+        myProgressView.progress = 0
+        
+        //ActivityIndicator
+        myActityIndicator.color = .orange
+        myActityIndicator.startAnimating()
+        myActityIndicator.hidesWhenStopped = true
+        
+        //TextField
+        myTextField.textColor = .brown
+        myTextField.placeholder = "Escribe algo"
+        myTextField.delegate = self
+
     }
     
     @IBAction func myButtonAction(_ sender: Any) {
@@ -95,18 +122,26 @@ class ViewController: UIViewController {
     
     
     @IBAction func mySliderAction(_ sender: Any) {
+        var progress:Float = 0
         switch mySlider.value {
         case 1..<2:
             setSliderAction(index: 0)
+            progress = 0.2
         case 2..<3:
             setSliderAction(index: 1)
+            progress = 0.4
         case 3..<4:
             setSliderAction(index: 2)
+            progress = 0.6
         case 4..<5:
             setSliderAction(index: 3)
+            progress = 0.8
         default:
             setSliderAction(index: 4)
+            progress = 1
         }
+        
+        myProgressView.progress = progress
     }
     
     
@@ -117,15 +152,20 @@ class ViewController: UIViewController {
         myPageControl.currentPage = Int(value) - 1
         myPickerView.selectRow(Int(value) - 1, inComponent: 0, animated: true)
         myButton.setTitle(myPickerViewValues[Int(value) - 1], for: .normal)
+        myStepperLabel.text = "\(value)"
     }
     
     
     @IBAction func mySwitchAction(_ sender: Any) {
         if mySwitch.isOn{
             myPickerView.isHidden = false
+            myActityIndicator.stopAnimating()
+            mySwitchLabel.text = "Está encendido"
         }
         else {
             myPickerView.isHidden = true
+            myActityIndicator.startAnimating()
+            mySwitchLabel.text = "Está apagado"
         }
     }
     
@@ -164,5 +204,15 @@ extension ViewController: UIPickerViewDataSource, UIPickerViewDelegate{
         mySteper.value = Double(row) + 1
     }
     
+}
+
+extension ViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        myButton.setTitle(myTextField.text, for: .normal)
+    }
 }
 

@@ -18,13 +18,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hola Mundo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="and-Hz-Tgj">
-                                <rect key="frame" x="152" y="472" width="111" height="26"/>
+                                <rect key="frame" x="152" y="472" width="111" height="25.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                    <color key="textColor" systemColor="systemBlueColor"/>
+                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unp-fx-nbE">
-                                <rect key="frame" x="30" y="715" width="354" height="35"/>
+                                <rect key="frame" x="169.5" y="715" width="75" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
@@ -45,7 +49,7 @@
                                 </connections>
                             </pageControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ycD-Yj-ckl">
-                                <rect key="frame" x="20" y="528" width="374" height="32"/>
+                                <rect key="frame" x="20" y="527.5" width="374" height="32"/>
                                 <segments>
                                     <segment title="First"/>
                                     <segment title="Second"/>
@@ -103,7 +107,7 @@
                             <constraint firstItem="and-Hz-Tgj" firstAttribute="top" secondItem="bMg-iQ-0dA" secondAttribute="bottom" constant="97" id="0bq-XS-caM"/>
                             <constraint firstItem="0vy-8v-kvy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="2v1-MI-3FC"/>
                             <constraint firstItem="G7s-ep-25m" firstAttribute="centerX" secondItem="bMg-iQ-0dA" secondAttribute="centerX" id="4JU-Ap-9fs"/>
-                            <constraint firstItem="unp-fx-nbE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="6QQ-1l-aSL"/>
+                            <constraint firstItem="unp-fx-nbE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6QQ-1l-aSL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cWB-EL-thi" secondAttribute="bottom" constant="36" id="80b-tW-WVL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wE5-5s-Agx" secondAttribute="trailing" constant="20" id="80e-gv-t9w"/>
                             <constraint firstItem="9UT-fR-Adr" firstAttribute="top" secondItem="bMg-iQ-0dA" secondAttribute="bottom" constant="20" id="8g6-8h-zcK"/>
@@ -127,7 +131,7 @@
                             <constraint firstItem="yXb-bO-7D7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="d7C-Dh-sZ8"/>
                             <constraint firstItem="wE5-5s-Agx" firstAttribute="leading" secondItem="9UT-fR-Adr" secondAttribute="trailing" constant="20" id="dpn-yd-P4N"/>
                             <constraint firstItem="bMg-iQ-0dA" firstAttribute="centerX" secondItem="unp-fx-nbE" secondAttribute="centerX" id="giN-dU-NPi"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="unp-fx-nbE" secondAttribute="trailing" constant="30" id="hvp-eO-5p8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="unp-fx-nbE" secondAttribute="trailing" id="hvp-eO-5p8"/>
                             <constraint firstItem="mq2-yF-ncQ" firstAttribute="centerY" secondItem="6fz-kA-q2Q" secondAttribute="centerY" id="koa-sT-NqW"/>
                             <constraint firstItem="ycD-Yj-ckl" firstAttribute="top" secondItem="and-Hz-Tgj" secondAttribute="bottom" constant="30" id="pMz-ex-3PG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ycD-Yj-ckl" secondAttribute="trailing" constant="20" id="rEo-iU-itI"/>
@@ -162,6 +166,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

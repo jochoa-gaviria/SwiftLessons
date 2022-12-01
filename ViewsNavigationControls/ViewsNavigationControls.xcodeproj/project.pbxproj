@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D98F26D293826A500B4BBC0 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D98F26C293826A500B4BBC0 /* PageViewController.swift */; };
+		0D98F26F29382B6A00B4BBC0 /* GrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D98F26E29382B6A00B4BBC0 /* GrayViewController.swift */; };
 		0DC86DCF292D8D6900B1C40F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC86DCE292D8D6900B1C40F /* AppDelegate.swift */; };
 		0DC86DD1292D8D6900B1C40F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC86DD0292D8D6900B1C40F /* SceneDelegate.swift */; };
 		0DC86DD3292D8D6900B1C40F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC86DD2292D8D6900B1C40F /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D98F26C293826A500B4BBC0 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		0D98F26E29382B6A00B4BBC0 /* GrayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayViewController.swift; sourceTree = "<group>"; };
 		0DC86DCB292D8D6900B1C40F /* ViewsNavigationControls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewsNavigationControls.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DC86DCE292D8D6900B1C40F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DC86DD0292D8D6900B1C40F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 				0DC86DD7292D8D6E00B1C40F /* Assets.xcassets */,
 				0DC86DD9292D8D6E00B1C40F /* LaunchScreen.storyboard */,
 				0DC86DDC292D8D6E00B1C40F /* Info.plist */,
+				0D98F26C293826A500B4BBC0 /* PageViewController.swift */,
+				0D98F26E29382B6A00B4BBC0 /* GrayViewController.swift */,
 			);
 			path = ViewsNavigationControls;
 			sourceTree = "<group>";
@@ -141,6 +147,8 @@
 				0DC86DD3292D8D6900B1C40F /* ViewController.swift in Sources */,
 				0DC86DCF292D8D6900B1C40F /* AppDelegate.swift in Sources */,
 				0DC86DD1292D8D6900B1C40F /* SceneDelegate.swift in Sources */,
+				0D98F26F29382B6A00B4BBC0 /* GrayViewController.swift in Sources */,
+				0D98F26D293826A500B4BBC0 /* PageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

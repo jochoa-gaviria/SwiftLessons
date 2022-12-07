@@ -24,32 +24,74 @@
             </objects>
             <point key="canvasLocation" x="-169" y="15"/>
         </scene>
-        <!--Azul-->
+        <!--Menú-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="navigation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chY-is-gy8">
+                                <rect key="frame" x="137.66666666666666" y="203" width="118" height="59.666666666666686"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Verde">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="38"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="greenButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KVl-U3-wO4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZD-6w-HmE">
+                                <rect key="frame" x="134.66666666666666" y="362.66666666666669" width="123.99999999999997" height="59.666666666666686"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Negro">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="38"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="blackButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bw9-WT-Hti"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GAL-rL-4bQ">
+                                <rect key="frame" x="148.33333333333334" y="522.33333333333337" width="96.666666666666657" height="59.666666666666629"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Rojo">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="38"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="redButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L3c-4c-wLb"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemMintColor"/>
+                        <constraints>
+                            <constraint firstItem="GAL-rL-4bQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Q6-FA-eb5"/>
+                            <constraint firstItem="chY-is-gy8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7C6-7J-x4S"/>
+                            <constraint firstItem="BZD-6w-HmE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8Pe-LS-hUE"/>
+                            <constraint firstItem="chY-is-gy8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="K7q-3B-dD8"/>
+                            <constraint firstItem="GAL-rL-4bQ" firstAttribute="top" secondItem="BZD-6w-HmE" secondAttribute="bottom" constant="100" id="Pye-bH-FXi"/>
+                            <constraint firstItem="BZD-6w-HmE" firstAttribute="top" secondItem="chY-is-gy8" secondAttribute="bottom" constant="100" id="Vdo-e3-X4Z"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Azul" id="z8P-N5-0Je">
-                        <barButtonItem key="rightBarButtonItem" title="Negro" id="Za2-Uf-c5A">
-                            <connections>
-                                <segue destination="7rT-7V-T4h" kind="show" id="cxP-Zv-iNM"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Menú" id="z8P-N5-0Je"/>
+                    <connections>
+                        <segue destination="Mq4-hB-4bc" kind="show" identifier="greenScreen" id="bcW-tl-8Ic"/>
+                        <segue destination="7rT-7V-T4h" kind="show" identifier="blackScreen" id="NdK-xM-iSu"/>
+                        <segue destination="fHt-6i-DmF" kind="show" identifier="redScreen" id="emX-Oi-HR8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="840" y="15"/>
         </scene>
-        <!--Negro-->
+        <!--View Controller Black Screen-->
         <scene sceneID="m0b-Ay-vPs">
             <objects>
-                <viewController id="7rT-7V-T4h" sceneMemberID="viewController">
+                <viewController id="7rT-7V-T4h" customClass="ViewControllerBlackScreen" customModule="navigation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nyr-B8-kwH">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,67 +99,47 @@
                         <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.026668013374637579" green="0.043175357754909716" blue="0.086585526613844999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Negro" id="kLS-nN-MPk">
-                        <barButtonItem key="rightBarButtonItem" title="Verde" id="d0r-Zc-LnD">
-                            <connections>
-                                <segue destination="Mq4-hB-4bc" kind="show" id="UCC-3R-xIP"/>
-                            </connections>
-                        </barButtonItem>
+                    <navigationItem key="navigationItem" id="kLS-nN-MPk">
+                        <barButtonItem key="rightBarButtonItem" title="Verde" id="d0r-Zc-LnD"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6WH-t8-Zdu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1781" y="15"/>
         </scene>
-        <!--Verde-->
+        <!--View Controller Green Screen-->
         <scene sceneID="7sI-yk-wSu">
             <objects>
-                <viewController id="Mq4-hB-4bc" sceneMemberID="viewController">
+                <viewController id="Mq4-hB-4bc" customClass="ViewControllerGreenScreen" customModule="navigation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WQM-DI-4dg">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Sy0-tM-LEO"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Verde" id="Qm0-xf-iR2">
-                        <barButtonItem key="rightBarButtonItem" title="Rojo" id="DA2-Fo-d78">
-                            <connections>
-                                <segue destination="fHt-6i-DmF" kind="show" id="u1r-fN-yOq"/>
-                            </connections>
-                        </barButtonItem>
+                    <navigationItem key="navigationItem" id="Qm0-xf-iR2">
+                        <barButtonItem key="rightBarButtonItem" title="Rojo" id="DA2-Fo-d78"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="psO-Om-sEo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2682" y="15"/>
+            <point key="canvasLocation" x="1781" y="-650"/>
         </scene>
-        <!--Rojo-->
+        <!--View Controller Red Screen-->
         <scene sceneID="I30-qd-hKH">
             <objects>
-                <viewController id="fHt-6i-DmF" sceneMemberID="viewController">
+                <viewController id="fHt-6i-DmF" customClass="ViewControllerRedScreen" customModule="navigation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y5U-8v-9R1">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Listo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVe-3n-VS8">
-                                <rect key="frame" x="163.33333333333334" y="407" width="66.666666666666657" height="38.333333333333314"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="gNx-20-q4c"/>
                         <color key="backgroundColor" systemColor="systemRedColor"/>
-                        <constraints>
-                            <constraint firstItem="aVe-3n-VS8" firstAttribute="centerY" secondItem="Y5U-8v-9R1" secondAttribute="centerY" id="4so-Kp-x37"/>
-                            <constraint firstItem="aVe-3n-VS8" firstAttribute="centerX" secondItem="Y5U-8v-9R1" secondAttribute="centerX" id="YvZ-od-9nS"/>
-                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Rojo" id="6UL-26-uAu"/>
+                    <navigationItem key="navigationItem" id="6UL-26-uAu"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="51N-Ns-bEI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3547" y="15"/>
+            <point key="canvasLocation" x="1781" y="749"/>
         </scene>
     </scenes>
     <resources>

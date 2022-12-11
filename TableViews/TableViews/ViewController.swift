@@ -73,7 +73,7 @@ extension ViewController : UITableViewDataSource{
             cell!.textLabel?.text = countries[indexPath.row]
             return cell!
         }
-        let cell  = tableView.dequeueReusableCell(withIdentifier: "myCustomCell", for: <#T##IndexPath#>) as? MyCustomTableViewCell
+        let cell  = tableView.dequeueReusableCell(withIdentifier: "myCustomCell", for: indexPath) as? MyCustomTableViewCell
         
         cell?.myFirstLabel.text = String(indexPath.row + 1)
         cell?.mySecondLabel.text = countries[indexPath.row]

@@ -30,10 +30,12 @@ class CarDetailViewController: UIViewController {
         case .simpleCar:
             simpleCar = Car()
             simpleCar?.color = "Negro"
+            imageView.image = UIImage(named: "simpleCar")
             InformationLabel.text = "It was created a simple car"
         case .electricCar:
             electricCar = ElectricCar()
             electricCar?.price = 10000
+            imageView.image = UIImage(named: "electricCar")
             InformationLabel.text = "It was created an electric car"
         case .none:
             print("None")

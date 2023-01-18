@@ -15,6 +15,7 @@
 		0D387795294266ED0092C9FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D387793294266ED0092C9FA /* LaunchScreen.storyboard */; };
 		0D38779E294670060092C9FA /* MyCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D38779C294670050092C9FA /* MyCustomTableViewCell.swift */; };
 		0D38779F294670060092C9FA /* MyCustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D38779D294670050092C9FA /* MyCustomTableViewCell.xib */; };
+		0DCB4920297792A7005DA90F /* TableViews.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0DCB491E297792A6005DA90F /* TableViews.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		0D387796294266ED0092C9FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D38779C294670050092C9FA /* MyCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomTableViewCell.swift; sourceTree = "<group>"; };
 		0D38779D294670050092C9FA /* MyCustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCustomTableViewCell.xib; sourceTree = "<group>"; };
+		0DCB491F297792A6005DA90F /* TableViews.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TableViews.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				0D387796294266ED0092C9FA /* Info.plist */,
 				0D38779C294670050092C9FA /* MyCustomTableViewCell.swift */,
 				0D38779D294670050092C9FA /* MyCustomTableViewCell.xib */,
+				0DCB491E297792A6005DA90F /* TableViews.xcdatamodeld */,
 			);
 			path = TableViews;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DCB4920297792A7005DA90F /* TableViews.xcdatamodeld in Sources */,
 				0D38778D294266E60092C9FA /* ViewController.swift in Sources */,
 				0D387789294266E60092C9FA /* AppDelegate.swift in Sources */,
 				0D38779E294670060092C9FA /* MyCustomTableViewCell.swift in Sources */,
@@ -368,6 +372,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0DCB491E297792A6005DA90F /* TableViews.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0DCB491F297792A6005DA90F /* TableViews.xcdatamodel */,
+			);
+			currentVersion = 0DCB491F297792A6005DA90F /* TableViews.xcdatamodel */;
+			path = TableViews.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0D38777D294266E60092C9FA /* Project object */;
 }

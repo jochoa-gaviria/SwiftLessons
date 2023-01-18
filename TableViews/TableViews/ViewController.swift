@@ -22,6 +22,11 @@ class ViewController: UIViewController {
         
         tableView.register(UINib(nibName: "MyCustomTableViewCell", bundle: nil), forCellReuseIdentifier: "myCustomCell")
     }
+    
+    @IBAction func addButtonAction(_ sender: Any) {
+        print("Add")
+    }
+    
 }
 
 extension ViewController : UITableViewDataSource{

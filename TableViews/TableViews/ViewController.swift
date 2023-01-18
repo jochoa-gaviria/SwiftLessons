@@ -6,13 +6,15 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    private let countries = ["España",
-    "Mexico", "Perú", "Colombia", "Argentina"]
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    private var countries:[Countries]? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,10 +23,39 @@ class ViewController: UIViewController {
         tableView.delegate = self
         
         tableView.register(UINib(nibName: "MyCustomTableViewCell", bundle: nil), forCellReuseIdentifier: "myCustomCell")
+        
+        recoverData()
     }
     
     @IBAction func addButtonAction(_ sender: Any) {
-        print("Add")
+        let alert = UIAlertController(title: "Add a country", message: "Add a new country", preferredStyle: .alert)
+        alert.addTextField()
+        let alertButton = UIAlertAction(title: "Add", style: .default)
+        {
+            (action)  in
+            
+            let textField = alert.textFields![0]
+            let newcountry = Countries(context: self.context)
+            newcountry.name = textField.text
+            
+            try! self.context.save()
+            
+            self.recoverData()
+        }
+        
+        alert.addAction(alertButton)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func recoverData(){
+        do {
+            self.countries = try context.fetch(Countries.fetchRequest())
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        } catch {
+            print("Error recovering data")
+        }
     }
     
 }
@@ -50,7 +81,7 @@ extension ViewController : UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return countries.count
+        return countries!.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -64,7 +95,6 @@ extension ViewController : UITableViewDataSource{
         return UITableView.automaticDimension
     }
     
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             var cell = tableView.dequeueReusableCell(withIdentifier: "cell")
@@ -75,21 +105,54 @@ extension ViewController : UITableViewDataSource{
                 cell?.backgroundColor = .lightGray
                 cell?.accessoryType = .disclosureIndicator
             }
-            cell!.textLabel?.text = countries[indexPath.row]
+            cell!.textLabel?.text = countries![indexPath.row].name
             return cell!
         }
         let cell  = tableView.dequeueReusableCell(withIdentifier: "myCustomCell", for: indexPath) as? MyCustomTableViewCell
         
         cell?.myFirstLabel.text = String(indexPath.row + 1)
-        cell?.mySecondLabel.text = countries[indexPath.row]
+        cell?.mySecondLabel.text = countries![indexPath.row].name
         
         return cell!
     }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") {
+            (action, view, completionHandler) in
+            
+            let deleteCountry = self.countries![indexPath.row]
+            
+            self.context.delete(deleteCountry)
+            
+            try! self.context.save()
+            
+            self.recoverData()
+        }
+        
+        return UISwipeActionsConfiguration(actions: [deleteAction])
+    }
+
 }
 
 extension ViewController : UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(countries[indexPath.row])
+        
+        let updateCountry = self.countries![indexPath.row]
+        let alert = UIAlertController(title: "update country", message: "Modifiy the country", preferredStyle: .alert)
+        alert.addTextField()
+        
+        let alertButton = UIAlertAction(title: "Edit", style: .default)
+        {
+            (action) in
+            let textField = alert.textFields![0]
+            updateCountry.name = textField.text
+            
+            try! self.context.save()
+            self.recoverData()
+        }
+        
+        alert.addAction(alertButton)
+        self.present(alert, animated: true, completion: nil)
     }
 }

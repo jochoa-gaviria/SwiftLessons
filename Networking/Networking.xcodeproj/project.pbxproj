@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D9E5C02297F6E0C001F83F0 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0D9E5C01297F6E0C001F83F0 /* Kingfisher */; };
+		0DABA121297F662200479DE8 /* NewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DABA120297F662200479DE8 /* NewUser.swift */; };
 		0DE5C31C297E10A0004A5551 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE5C31B297E10A0004A5551 /* AppDelegate.swift */; };
 		0DE5C31E297E10A0004A5551 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE5C31D297E10A0004A5551 /* SceneDelegate.swift */; };
 		0DE5C320297E10A0004A5551 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE5C31F297E10A0004A5551 /* ViewController.swift */; };
@@ -19,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0DABA120297F662200479DE8 /* NewUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUser.swift; sourceTree = "<group>"; };
 		0DE5C318297E10A0004A5551 /* Networking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Networking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE5C31B297E10A0004A5551 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DE5C31D297E10A0004A5551 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D9E5C02297F6E0C001F83F0 /* Kingfisher in Frameworks */,
 				0DE5C331297E1230004A5551 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				0DE5C336297E136A004A5551 /* User.swift */,
+				0DABA120297F662200479DE8 /* NewUser.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -109,6 +114,7 @@
 			name = Networking;
 			packageProductDependencies = (
 				0DE5C330297E1230004A5551 /* Alamofire */,
+				0D9E5C01297F6E0C001F83F0 /* Kingfisher */,
 			);
 			productName = Networking;
 			productReference = 0DE5C318297E10A0004A5551 /* Networking.app */;
@@ -140,6 +146,7 @@
 			mainGroup = 0DE5C30F297E10A0004A5551;
 			packageReferences = (
 				0DE5C32F297E1230004A5551 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				0D9E5C00297F6E0C001F83F0 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 0DE5C319297E10A0004A5551 /* Products */;
 			projectDirPath = "";
@@ -169,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DE5C320297E10A0004A5551 /* ViewController.swift in Sources */,
+				0DABA121297F662200479DE8 /* NewUser.swift in Sources */,
 				0DE5C31C297E10A0004A5551 /* AppDelegate.swift in Sources */,
 				0DE5C333297E1248004A5551 /* NetworkingProvider.swift in Sources */,
 				0DE5C337297E136A004A5551 /* User.swift in Sources */,
@@ -394,6 +402,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		0D9E5C00297F6E0C001F83F0 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		0DE5C32F297E1230004A5551 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -405,6 +421,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0D9E5C01297F6E0C001F83F0 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0D9E5C00297F6E0C001F83F0 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		0DE5C330297E1230004A5551 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0DE5C32F297E1230004A5551 /* XCRemoteSwiftPackageReference "Alamofire" */;

@@ -11,6 +11,7 @@
 		0D4C12E9298209CD00D59915 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4C12E8298209CD00D59915 /* ContentView.swift */; };
 		0D4C12EB298209D100D59915 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D4C12EA298209D100D59915 /* Assets.xcassets */; };
 		0D4C12EE298209D100D59915 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D4C12ED298209D100D59915 /* Preview Assets.xcassets */; };
+		0D7D4BE82983409D0014EDDE /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7D4BE72983409D0014EDDE /* ImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		0D4C12E8298209CD00D59915 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0D4C12EA298209D100D59915 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D4C12ED298209D100D59915 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0D7D4BE72983409D0014EDDE /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				0D4C12E8298209CD00D59915 /* ContentView.swift */,
 				0D4C12EA298209D100D59915 /* Assets.xcassets */,
 				0D4C12EC298209D100D59915 /* Preview Content */,
+				0D7D4BE72983409D0014EDDE /* ImageView.swift */,
 			);
 			path = SwitfUITutorial;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D7D4BE82983409D0014EDDE /* ImageView.swift in Sources */,
 				0D4C12E9298209CD00D59915 /* ContentView.swift in Sources */,
 				0D4C12E7298209CD00D59915 /* SwitfUITutorialApp.swift in Sources */,
 			);

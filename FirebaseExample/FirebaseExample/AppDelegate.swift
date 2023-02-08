@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseCore
+import GoogleSignIn
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Firebase
         
         FirebaseApp.configure()
+        
         
         return true
     }

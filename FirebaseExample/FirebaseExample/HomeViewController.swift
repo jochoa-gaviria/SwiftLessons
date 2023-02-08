@@ -10,6 +10,7 @@ import FirebaseAuth
 
 enum ProviderType: String {
     case basic
+    case google
 }
 
 
@@ -20,6 +21,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var providerLabel: UILabel!
     @IBOutlet weak var closeSesionButton: UIButton!
     
+
     private let email:String
     private let provider:ProviderType
     
@@ -37,15 +39,29 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         title = "Inicio"
+        navigationItem.setHidesBackButton(true, animated: false)
+        
         emailLabel.text = email
         providerLabel.text = provider.rawValue
+        
+        let defaults = UserDefaults.standard
+        
+        defaults.set(email, forKey: "email")
+        defaults.set(provider.rawValue, forKey: "provider")
+        defaults.synchronize()
     }
     
 
     @IBAction func closeSesionAction(_ sender: Any) {
         
+        let defaults = UserDefaults.standard
+        
+        defaults.removeObject(forKey: "email")
+        defaults.removeObject(forKey: "provider")
+        defaults.synchronize()
+        
         switch provider {
-        case .basic:
+        case .basic, .google:
             do {
                 try Auth.auth().signOut()
                 navigationController?.popViewController(animated: true)
@@ -55,5 +71,8 @@ class HomeViewController: UIViewController {
 
         }
         
+    }
+    
+    @IBAction func googleButton(_ sender: Any) {
     }
 }

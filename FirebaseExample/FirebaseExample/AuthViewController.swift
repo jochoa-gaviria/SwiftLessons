@@ -11,6 +11,8 @@ import FirebaseAuth
 
 class AuthViewController: UIViewController {
 
+    @IBOutlet weak var stackViewVertical: UIStackView!
+    @IBOutlet weak var googleButton: UIButton!
     @IBOutlet weak var logInButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var emailTextField: UITextField!
@@ -23,6 +25,13 @@ class AuthViewController: UIViewController {
         // analytics events.
         
         Analytics.logEvent("InitScreen", parameters: ["message": "Integración de fierebase completa"])
+        
+        let defaults = UserDefaults.standard
+        if let email = defaults.value(forKey: "email") as? String,
+           let provider = defaults.value(forKey: "provider") as? String {
+            stackViewVertical.isHidden = true
+            self.navigationController?.pushViewController(HomeViewController(email: email, provider: ProviderType.init(rawValue: provider)!), animated: false)
+        }
     }
     
     @IBAction func signUpAction(_ sender: Any) {
@@ -61,9 +70,9 @@ class AuthViewController: UIViewController {
                 }
             }
         }
-        
-        
     }
+    
+    @IBOutlet weak var googleButtonAction: UIStackView!
     
     
 }
